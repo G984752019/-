@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>間違い探しゲーム！</title>
+</head>
+<body>
+    <h1>間違い探しゲーム！</h1>
+    <div class="prevScore">
+      前回のクリアタイム:
+      <!-- <span id="prevLevel">...</span>
+      <span>/</span> -->
+      <span id="prevTime">...</span>
+    </div>
+    <div class="score">
+        Time:
+        <span id="time">0</span>
+    </div>
+    <button type="button" onclick="init()">ゲーム開始</button>
+    <br><button type="button" onclick="easy()">簡単</button>
+    <button type="button" onclick="normal()">普通</button>
+    <button type="button" onclick="hard()">難しい</button><br>
+    <span>現在の難易度 :</span>
+    <span class = "text" id="level">普通</span>
+
+
+    <div id="cells"></div>
+
+    <script src="js/init.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
