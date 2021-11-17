@@ -12,12 +12,14 @@ const q = [
 ];
 const cells = document.getElementById("cells");
 const score = document.getElementById("time");
+const level = document.getElementById('level');
 const prevScore = document.getElementById("prevTime");
-//const prevlevel = document.getElementById("prevLevel");
+const prevlevel = document.getElementById("prevLevel");
 let start;
 let now;
 const correct = new Audio('sound/correct.mp3');
 const wrong = new Audio('sound/wrong.mp3');
-const MAX = 1;
+const MAX = 4;
 let count = 0;
 let size = 5;
+let levelCt = 2;

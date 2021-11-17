@@ -24,7 +24,7 @@ function gameStart() {
           }
 
           if(count == MAX){
-            counter();
+
             gameClear();
           }else{
             gameStart();
@@ -61,42 +61,16 @@ function stop() {
 
 function reset(){
   size = 5;
-  document.getElementById('level').innerText = '普通';
+  level.textContent = '普通';
   count = 0;
+  levelCt = 2;
 }
 
 function gameClear(){
-  reset();
+  save();
+  load();
+  //reset();
   stop();
   alert("GAME CLEAR!!");
-}
 
-function counter(){
-  let prevtime = parseInt((now.getTime() - start.getTime()) / 1000);;
-  prevTime.textContent = prevtime;
-  //prevlevel.textContent = prevLevel;
-}
-
-function easy() {
-  if(timer == null){
-    size = 3;
-    document.getElementById('level').innerText = '簡単';
-    //let prevLevel = '簡単';
-  }
-}
-
-function normal() {
-  if(timer == null){
-    size = 5;
-    document.getElementById('level').innerText = '普通';
-    //let prevLevel = "普通";
-  }
-}
-
-function hard() {
-  if(timer == null){
-    size = 7;
-    document.getElementById('level').innerText = '難しい';
-    //let prevLevel = "難しい";
-  }
 }
